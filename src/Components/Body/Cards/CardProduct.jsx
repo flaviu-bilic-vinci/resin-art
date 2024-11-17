@@ -6,8 +6,8 @@ import Badge from 'react-bootstrap/Badge';
 function CardProduct({ linkPhoto, name, description, price }) {
     return (
         <>
-            <Col>
-                <Card style={{ width: '18rem' }}>
+            <Col className='d-flex justify-content-center'>
+                <Card className="my-5" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={linkPhoto} />
                     <Card.Body>
                         <Card.Title>

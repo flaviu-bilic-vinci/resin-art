@@ -1,32 +1,41 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Row, Col } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import SocialMedia from './Components/Body/SocialMedia/SocialMedia';
 import TeamIntroduction from './Components/Body/TeamIntroduction/TeamIntroduction';
-import CardBody from './Components/Body/CardBody/CardBody';
+import CardBodyProducts from './Components/Body/CardBody/CardBodyProducts';
+import CardBodyPersons from './Components/Body/CardBody/CardBodyPersons';
 
 function App() {
   return (
     <Container fluid={'md'}>
-      <Header title={"ResinArt"} />
+      <Row className='mb-5'>
+        <Col>
+          <Header  title={"ResinArt"} />
+        </Col>
+      </Row>
 
-      <Row>
+      <Row >
         <Col>
           <TeamIntroduction title={"Wie zijn we ?"} />
         </Col>
       </Row>
 
-      <Row>
+      <Row className='mb-5'>
         <Col xs={12} md={6}>
           <p>Bla Bla Bla</p>
         </Col>
-        <Col>
+        
           <Col xs={12} md={6}>
-            <img src="https://picsum.photos/300/300.webp" alt="PlaceHolderAlt" />
+            <img 
+              src="https://picsum.photos/600/300.webp" 
+              alt="PlaceHolderAlt"
+              className="img-fluid" />
           </Col>
-        </Col>
       </Row>
 
       <Row>
@@ -36,13 +45,17 @@ function App() {
       </Row>
 
       <Row>
-          <CardBody />
+          <CardBodyProducts />
       </Row>
 
       <Row>
         <Col>
           <SocialMedia title={"Onze team, volg ons op social media !"} />
         </Col>
+      </Row>
+
+      <Row>
+      <CardBodyPersons/>
       </Row>
 
       <Footer title={"PlaceHolder Footer Title"} subTitle={"© 2024 ResinArt by VIA Tienen. All rights reserved."} />
